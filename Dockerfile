@@ -14,8 +14,8 @@ ENV DB_POSTGRESDB_USER=$PGUSER
 ENV DB_POSTGRESDB_PASSWORD=$PGPASSWORD
 
 USER root
-# Install packages in n8n's node_modules directory
-WORKDIR /usr/local/lib/node_modules/n8n
+# Install packages in n8n directory
+WORKDIR /n8n
 RUN npm install axios moment lodash @types/axios @types/lodash
 WORKDIR /data
 USER node
