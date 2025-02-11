@@ -4,3 +4,12 @@ healthcheckPath = "/healthz"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 8
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[variables]
+N8N_NODES_INCLUDE_MODE = "all"
+N8N_NODES_EXCLUDE_MODE = "none"
+NODE_FUNCTION_ALLOW_EXTERNAL = "axios,moment,lodash"
